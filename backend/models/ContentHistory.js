@@ -1,11 +1,10 @@
-const mongo = require("mongoose");
+const mongoose = require("mongoose");
 
 //Schema
-
-const Historyschema = new mongoose.Scheme(
+const historySchema = new mongoose.Schema(
   {
-    username: {
-      type: mongoosse.Schema.Types.ObjectId,
+    user: {
+      type: mongoose.Schema.Types.ObjectId,
       ref: "User",
     },
     content: {
@@ -13,14 +12,12 @@ const Historyschema = new mongoose.Scheme(
       required: true,
     },
   },
-
   {
     timestamps: true,
   }
 );
 
-//!Compile to form model
+//! Compile to form the model
+const ContentHistory = mongoose.model("ContentHistory", historySchema);
 
-const Contenthistory = mongoose.mongo("User", Historyschema);
-
-module.exports = Contenthistory;
+module.exports = ContentHistory;
