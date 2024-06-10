@@ -1,8 +1,7 @@
 const express = require("express");
-
-const isAuthenticated = require("../middlewares/isAuthenticated");
-const { openAIController } = require("../controllers/openAIController");
-const checkApiRequestLimit = require("../middlewares/checkApiRequestLimit");
+const isAuthenticated = require("../MIDDLEWARE/isAuthenticated");
+const { openAIController } = require("../contollers/openAIController");
+const checkApiRequestLimit = require("../MIDDLEWARE/checkApiRequestLimit");
 
 const openAIRouter = express.Router();
 
