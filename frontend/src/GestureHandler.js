@@ -78,7 +78,7 @@ export default function GestureHandler() {
 
           if (maxConfidenceGesture.name === "yoo!") {
             console.log("Detected yoo gesture!");
-            await logout();
+
             // Call logout API if "logout" gesture is detected
           }
           if (maxConfidenceGesture.name === "plan!") {
