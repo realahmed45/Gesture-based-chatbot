@@ -13,6 +13,10 @@ require("./utils/connectDB")();
 const app = express();
 const PORT = process.env.PORT || 8090;
 
+app.use("/", (req, res) => {
+  res.json({ message: "Hi! Server running successfully!" });
+});
+
 //Cron for the trial period : run every single
 cron.schedule("0 0 * * * *", async () => {
   console.log("This task runs every second");
